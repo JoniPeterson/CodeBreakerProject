@@ -8,7 +8,7 @@ function guess() {
     	setHiddenFields();
     }
 
-    if(validateInput(input.value)){
+    if(!validateInput(input.value)){
     	return;
     }
 
@@ -23,6 +23,8 @@ function guess() {
     	showAnswer(false);
     	showReplay();	
     } else setMessage('Incorrect, try again!');
+
+	}
 }
 
 function getResults(input){
